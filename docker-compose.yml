@@ -1,0 +1,13 @@
+version: '3'
+services:
+  capitaldb:
+    container_name: capitaldb
+    image: postgres
+    volumes:
+      - ./files:/var/lib/postgresql
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: capitaluser
+      POSTGRES_PASSWORD: capitalpassword
+      POSTGRES_DB: capitaldb
