@@ -2,6 +2,7 @@ version: '3'
 services:
   capitaldb:
     container_name: capitaldb
+    restart: always
     image: postgres
     volumes:
       - ./files:/var/lib/postgresql
